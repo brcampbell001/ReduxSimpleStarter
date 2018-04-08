@@ -1,15 +1,16 @@
-import React from 'react';
+import React from 'react'; // go find library called react and assign to variable React
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+import SearchBar from './components/search_bar';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const API_KEY = 'AIzaSyAekLdm3wFv5ejnMUhp-Q-a270CMZS0GPE';
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+// Create a new component. This component should produce some HTML
+const App = () => {
+    return <div>Hi!</div>;
+}
+
+// Take this component's generated HTML and put it on the page (in the DOM)
+ReactDOM.render(<App />, document.querySelector('.container'));
+// creates an instance of app <App />    Just App would be a class component not an instance of the component
+// document.querySelector and go and find parent div container to render App in
